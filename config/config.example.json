@@ -1,0 +1,85 @@
+{
+  "mycodo": {
+    "connection_method": "api",
+    "host": "localhost",
+    "port": 8080,
+    "api_key": "SU_CLAVE_API_DE_MYCODO",
+    "ssl": false,
+    "influxdb": {
+      "host": "localhost",
+      "port": 8086,
+      "database": "mycodo_db",
+      "username": "",
+      "password": ""
+    },
+    "export_dir": "/var/mycodo-export",
+    "daemon_path": "/var/mycodo-root"
+  },
+  "output_dir": "/home/pi/mycodo-plant-analyzer-output",
+  "plant_profiles": {
+    "tomate": {
+      "type": "tomato",
+      "base_growth_rate": 2.5,
+      "sensor_mapping": {
+        "temperature": "input_1",
+        "humidity": "input_1",
+        "light": "input_2",
+        "soil_moisture": "input_3"
+      },
+      "optimal_ranges": {
+        "temperature": {"min": 20, "max": 26, "unit": "°C"},
+        "humidity": {"min": 65, "max": 85, "unit": "%"},
+        "light": {"min": 15000, "max": 30000, "unit": "lux"},
+        "soil_moisture": {"min": 60, "max": 80, "unit": "%"}
+      }
+    },
+    "lechuga": {
+      "type": "lettuce",
+      "base_growth_rate": 1.8,
+      "sensor_mapping": {
+        "temperature": "input_1",
+        "humidity": "input_1",
+        "light": "input_2",
+        "soil_moisture": "input_3"
+      },
+      "optimal_ranges": {
+        "temperature": {"min": 15, "max": 22, "unit": "°C"},
+        "humidity": {"min": 70, "max": 90, "unit": "%"},
+        "light": {"min": 10000, "max": 25000, "unit": "lux"},
+        "soil_moisture": {"min": 65, "max": 85, "unit": "%"}
+      }
+    },
+    "pimiento": {
+      "type": "pepper",
+      "base_growth_rate": 1.5,
+      "sensor_mapping": {
+        "temperature": "input_1",
+        "humidity": "input_1",
+        "light": "input_2",
+        "soil_moisture": "input_3"
+      },
+      "optimal_ranges": {
+        "temperature": {"min": 21, "max": 29, "unit": "°C"},
+        "humidity": {"min": 50, "max": 70, "unit": "%"},
+        "light": {"min": 18000, "max": 35000, "unit": "lux"},
+        "soil_moisture": {"min": 55, "max": 75, "unit": "%"}
+      }
+    },
+    "fresa": {
+      "type": "strawberry",
+      "base_growth_rate": 1.2,
+      "sensor_mapping": {
+        "temperature": "input_1",
+        "humidity": "input_1",
+        "light": "input_2",
+        "soil_moisture": "input_3"
+      },
+      "optimal_ranges": {
+        "temperature": {"min": 18, "max": 24, "unit": "°C"},
+        "humidity": {"min": 60, "max": 80, "unit": "%"},
+        "light": {"min": 12000, "max": 28000, "unit": "lux"},
+        "soil_moisture": {"min": 60, "max": 75, "unit": "%"}
+      }
+    }
+  }
+}
