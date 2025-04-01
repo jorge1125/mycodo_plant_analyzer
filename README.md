@@ -15,7 +15,7 @@ Un sistema completo para analizar datos de plantas recopilados por Mycodo, evalu
 ### Método Rápido
 
 ```bash
-git clone https://github.com/jorge1125/mycodo-plant-analyzer.git
+git clone https://github.com/jorge1125/mycodo_plant_analyzer.git
 cd mycodo-plant-analyzer
 bash scripts/install.sh
 ```
@@ -24,8 +24,8 @@ bash scripts/install.sh
 
 1. Clone el repositorio:
    ```bash
-   git clone https://github.com/jorge1125/mycodo-plant-analyzer.git
-   cd mycodo-plant-analyzer
+   git clone https://github.com/jorge1125/mycodo_plant_analyzer.git
+   cd mycodo_plant_analyzer
    ```
 
 2. Cree un entorno virtual:
