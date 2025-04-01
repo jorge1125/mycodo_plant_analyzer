@@ -27,17 +27,30 @@ bash scripts/install.sh
    git clone https://github.com/jorge1125/mycodo_plant_analyzer.git
    cd mycodo_plant_analyzer
    ```
-
-2. Cree un entorno virtual:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. Instale el paquete:
-   ```bash
-   pip install -e .
-   ```
+Para instalar el paquete desde el directorio clonado:
+Navega al directorio del repositorio:
+bash
+cd /home/usuario/mycodo_plant_analyzer
+Ejecuta el script de instalación automática:
+bash
+bash scripts/install.sh
+El script realizará todo el proceso de instalación automáticamente. Seguirá estos pasos:
+Verificará las dependencias necesarias
+Creará un entorno virtual en ~/mycodo-plant-analyzer-env
+Instalará el paquete y sus dependencias
+Configurará los directorios necesarios
+Copiará el archivo de configuración de ejemplo a ~/.mycodo-plant-analyzer/config.json
+Creará un acceso directo en ~/bin/mycodo-plant-analyzer
+Después de la instalación, necesitarás editar el archivo de configuración para conectarlo con tu instancia de Mycodo:
+bash
+nano ~/.mycodo-plant-analyzer/config.json
+Asegúrate de configurar correctamente:
+La conexión a Mycodo (host, puerto, API key)
+Los perfiles de plantas con los IDs correctos de tus sensores
+Una vez configurado, puedes ejecutar un análisis con:
+bash
+~/bin/mycodo-plant-analyzer --profile tomate
+Los resultados del análisis se guardarán en ~/mycodo-plant-analyzer-output/ y podrás abrir el dashboard HTML generado en tu navegador para ver las visualizaciones.
 
 4. Configure el sistema:
    ```bash
